@@ -1,0 +1,13 @@
+@import "~@scss/variables";
+
+.Collapse {
+  overflow: hidden;
+  transition: $transition;
+  transition-property: height;
+
+  &__content {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+}

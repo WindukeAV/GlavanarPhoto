@@ -1,0 +1,9 @@
+@import "~@scss/variables";
+
+.Button {
+  padding: 8px;
+
+  border-radius: 5px;
+  color: white;
+  background-color: map-get($colors, primary);
+}
