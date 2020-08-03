@@ -1,9 +1,12 @@
 @import "~@scss/variables";
 
 .Button {
+  width: 260px;
+  height: 50px;
   padding: 8px;
-
-  border-radius: 5px;
-  color: white;
-  background-color: map-get($colors, primary);
+  margin-top: 10px;
+  color: black;  
+  background: #EBEBEB;  
+  border: 1px solid #c2c2c2;
+  outline: none;
 }

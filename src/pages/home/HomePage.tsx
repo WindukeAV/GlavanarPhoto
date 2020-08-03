@@ -12,20 +12,20 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
 
   return (
     <section>
-      <div style={{ marginBottom: 64 }}>
-        <Button onClick={handleButtonClick}>Toggle Kek</Button>
+      <div  style={{  }}>
+        <Button onClick={handleButtonClick}>title</Button>
         <Collapse isCollapsed={isCollapsed}>
-          <h1 style={{ marginBottom: 16 }}>Privet</h1>
+          <h1 style={{  }}>content</h1>
         </Collapse>
-        <Button onClick={handleButtonClick}>Toggle Kek</Button>
+        <Button onClick={handleButtonClick}>title</Button>
         <Collapse isCollapsed={isCollapsed}>
-          <h1 style={{ marginBottom: 16 }}>Privet</h1>
+          <h1 style={{  }}>content</h1>         
         </Collapse>
       </div>
       <div>
         <Accordion
           tabs={[
-            {
+            {              
               key: "one",
               head: "CHIKI",
               content: "PUKI"

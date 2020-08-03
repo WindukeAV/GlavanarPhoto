@@ -7,7 +7,9 @@ export interface AccordionTab {
 }
 
 export interface AccordionProps {
-  tabs: AccordionTab[];
+  tabs: AccordionTab[
+      
+  ];
 }
 
 export const Accordion: React.FC<AccordionProps> = ({
@@ -15,11 +17,13 @@ export const Accordion: React.FC<AccordionProps> = ({
 }) => {
   const [] = React.useState({});
 
+
+
   return (
     <div>
       {tabs.map((tab) => {
         return (
-          <div>
+          <div key={tab.key}>           
             <div>{tab.head}</div>
             <div>{tab.content}</div>
           </div>
