@@ -1,7 +1,6 @@
-@import "~@scss/variables";
+@import "~@scss/theme";
 
-.Button {
-  
+.Button {  
   width: 860px;
   height: 50px;
   padding: 8px;  
@@ -12,7 +11,5 @@
   outline: none;
   font-weight: bold;
   text-align: left;
-
-
 }
 

@@ -1,4 +1,6 @@
-@import "~@scss/variables";
+@import "~@scss/theme.scss";
+
+
 
 
 .Collapse {
@@ -14,13 +16,9 @@
     padding: 8px;     
     color: black;
     font-weight: bold;
+    
     border-left: 1px solid #c2c2c2;
     border-right: 1px solid #c2c2c2;
-
-    &:last-child{
-      
-      border-bottom: 1px solid #000;
-    }
   }  
 }
 

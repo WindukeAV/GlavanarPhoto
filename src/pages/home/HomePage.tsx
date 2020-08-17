@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Collapse, Accordion } from '@ui';
 
+import Cover from '../home/partials/cover/Cover';
+
 export interface HomePageProps { }
 
 export const HomePage: React.FC<HomePageProps> = ({ }) => {
@@ -12,6 +14,9 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
 
   return (
     <section>
+      <Cover/>
+      
+      
       <div  style={{  }}>
         <Button onClick={handleButtonClick}>Что делать, если я не умею позировать</Button>
         <Collapse isCollapsed={isCollapsed}>

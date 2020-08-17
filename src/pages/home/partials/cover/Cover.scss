@@ -1,0 +1,30 @@
+@import "~@scss/theme.scss";
+@import "~@scss/fonts.scss";
+
+
+.cover {
+	height: 1080px;
+	width: 100%;
+	background-color: #232323;
+
+
+	&__title {
+		width: 190px;
+		text-align: left;
+		font-size: 36px;
+		color: white;
+		margin: 0 auto;
+		font-family: Montserrat;
+		font-weight: 400;
+	}
+
+	&__subtitle {
+		width: 190px;
+		color: white;
+		font-size: 23px;
+		text-align: right;
+		margin: 0 auto;
+
+	}
+}
+
