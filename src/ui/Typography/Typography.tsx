@@ -27,7 +27,7 @@ export const Typography: React.FC<TypographyProps> = (props) => {
 	} = props;
 
 	const className = buildClass(
-		
+		`${prefix}-locale-ru`,
 		`${prefix}-weight-${fontWeight}`,
 		classNameFromProps
 	);
