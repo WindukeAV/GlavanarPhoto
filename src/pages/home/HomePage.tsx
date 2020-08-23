@@ -1,5 +1,10 @@
 import React from "react";
-import { Button, Collapse, Accordion } from '@ui';
+// import { Button, Collapse, Accordion } from '@ui';
+
+// import styles from '*.css';
+
+
+
 
 export interface HomePageProps { }
 
@@ -11,19 +16,20 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
   };
 
   return (
-    <section>
-      <div  style={{  }}>
-        <Button onClick={handleButtonClick}>title</Button>
-        <Collapse isCollapsed={isCollapsed}>
-          <h1 style={{  }}>content</h1>
-        </Collapse>
-        <Button onClick={handleButtonClick}>title</Button>
-        <Collapse isCollapsed={isCollapsed}>
-          <h1 style={{  }}>content</h1>         
-        </Collapse>
-      </div>
-      <div>
-        <Accordion
+    <>
+    {/* <section>
+       <div  style={{  }}>
+         <Button onClick={handleButtonClick}>title</Button>
+         <Collapse isCollapsed={isCollapsed}>
+           <h1 style={{  }}>content</h1>
+         </Collapse>
+         <Button onClick={handleButtonClick}>title</Button>
+         <Collapse isCollapsed={isCollapsed}>
+           <h1 style={{  }}>content</h1>
+         </Collapse>
+       </div>
+       <div>
+         <Accordion
           tabs={[
             {              
               key: "one",
@@ -43,6 +49,9 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
           ]}
         />
       </div>
-    </section>
+    </section> */}
+
+    </>
   );
+
 };
