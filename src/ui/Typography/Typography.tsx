@@ -1,10 +1,12 @@
 import * as React from "react";
 import { buildClass } from "../../utils/buildClass";
 
+import "./Typography.scss"
+
 interface TypographyProps {
-	fontWeight: FontWeights;
 	className?: string;
 	tag: string;
+	fontWeight: FontWeights;
 	children: React.ReactNode;
 }
 
@@ -17,11 +19,13 @@ export enum FontWeights {
 	Bold = "bold",
 }
 
+
+
 export const Typography: React.FC<TypographyProps> = (props) => {
 	const {
-		fontWeight,
 		className: classNameFromProps,
 		tag,
+		fontWeight,
 		children,
 		...rest
 	} = props;

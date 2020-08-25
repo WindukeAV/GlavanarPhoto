@@ -1,15 +1,20 @@
 @import "~@scss/theme";
 
 .Button {  
-  width: 860px;
-  height: 50px;
-  padding: 8px;  
-  color: black;  
-  border-top: 1px solid #c2c2c2;
-  border-left: 1px solid #c2c2c2;
-  border-right: 1px solid #c2c2c2;  
-  outline: none;
-  font-weight: bold;
-  text-align: left;
+  width: 180px;
+  height: 45px;
+
+  margin-top: 46px;
+  margin-left: 16px;
+
+  padding: 8px;
+
+  border: 1px solid map-get($colors , t-color);
+
+  text-transform: uppercase;
+
+  font-size: 16px;
+  
+  color: map-get($colors, gold-d1);
 }
 

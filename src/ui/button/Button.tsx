@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Button.scss';
 
 export interface ButtonProps {
+  className?: string;
   onClick?: (event: React.MouseEvent) => void;
 }
 

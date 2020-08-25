@@ -3,10 +3,7 @@ import React from "react";
 
 // import styles from '*.css';
 
-
-
-
-import Cover from '../home/partials/cover/Cover';
+import { Cover } from '../home/partials/Cover/Cover';
 
 export interface HomePageProps { }
 
@@ -18,10 +15,10 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
   };
 
   return (
-    <section>
+    <section>      
       <Cover/>
-      
-      
+
+
       {/* <div  style={{  }}>
         <Button onClick={handleButtonClick}>Что делать, если я не умею позировать</Button>
         <Collapse isCollapsed={isCollapsed}>
@@ -51,9 +48,10 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
           ]}
         />
       </div> */}
+
     </section>
 
-    </>
+  
   );
 
 };
