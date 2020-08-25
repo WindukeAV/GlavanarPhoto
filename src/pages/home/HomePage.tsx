@@ -3,7 +3,7 @@ import React from "react";
 
 // import styles from '*.css';
 
-import { Cover } from '../home/partials/Cover/Cover';
+import { Cover } from '../home/partials/cover/Cover';
 
 export interface HomePageProps { }
 

@@ -1,6 +1,6 @@
 @import "~@scss/theme";
 
-.cover {
+.Cover {
 	width: 100%;
 	height: 100vh;
 
@@ -9,14 +9,14 @@
 	background-color: map-get($colors, second-background-color);
 }
 
-.cover__container {
+.Cover__container {
 	width: 90%;
 
 	margin: 0 auto;
 
 }
 
-.cover__title {
+.Cover__title {
 	width: 230px;
 	
 	padding-top: 60px;
@@ -29,7 +29,7 @@
 	text-transform: uppercase;
 }
 
-.cover__title_svg {
+.Cover__title_svg {
     position: relative;
 	width: 100%;
 	
@@ -39,7 +39,7 @@
 	margin-top: 50px;
 }
 
-.cover__subtitle {
+.Cover__subtitle {
 	width: 240px;
 
 	margin: 0 auto;
@@ -53,6 +53,6 @@
 	color: map-get($colors, t-color);
 }
 
-.cover__btn {
+.Cover__btn {
 	
 }

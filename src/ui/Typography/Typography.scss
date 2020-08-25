@@ -1,8 +1,4 @@
-$prefix: 't';
-
-$typography-locales: (
-  ru: Montserrat,
-);
+$prefix: "t";
 
 $typography-weights: (
 	regular: 400,
@@ -11,22 +7,11 @@ $typography-weights: (
 	semibold: 800,
 );
 
-@each $locale, $font-family in $typography-locales {
-	:global .#{$prefix}-locale-ru{
-	  font-family: $font-family;
-  
-	  @each $weight-name, $weight in $typography-weights {
-		&.#{$prefix}-weight-#{$weight-name} {
-		  font-weight: $weight;
+:global {
+	@each $weight-name, $weight in $typography-weights {
+		.#{$prefix}-#{$weight-name} {
+			font-family: Montserrat;
+			font-weight: $weight;
 		}
-	  }
-  
-	  &.#{$prefix}-style-normal {
-		  font-style: normal;
-	  }
-  
-	  &.#{$prefix}-style-italic {
-		  font-style: italic;
-	  }
 	}
-  }
+}

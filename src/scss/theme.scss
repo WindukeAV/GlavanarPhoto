@@ -1,34 +1,36 @@
 $colors: (
-	t-color: #FFFFFF,
+	t-color: #ffffff,
 	background-color: #232323,
-	second-background-color: #2E2E2E,
-	gold: #F1D880,	
-	gold-d1: #B8860B,
-  );
-  
-  $transition: .3s ease-in-out;
-
-  $breakpoints: (
-  xs: 320px, // mobile phones
-  sm: 768px, // tablets
-  md: 1025px, // large tablets
-  lg: 1400px, // small pc screens
-  xl: 1920px, // large pc screens
+	second-background-color: #2e2e2e,
+	gold: #f1d880,
+	gold-d1: #b8860b,
 );
-  
+
+$transition: 0.3s ease-in-out;
+
+$breakpoints: (
+	// mobile phones
+	xs: 320px,
+	// tablets
+	sm: 768px,
+	// large tablets
+	md: 1025px,
+	// small pc screens
+	lg: 1400px,
+	// large pc screens
+	xl: 1920px,
+);
+
 @mixin breakpoint($breakpoint) {
 	@if $breakpoint == "" {
-	  @content;
-	}
-  
-	@else {
-	  $breakpoint-value: map-get($breakpoints, $breakpoint);
-  
-	  @if $breakpoint-value != null {
-		@media (min-width: $breakpoint-value) {
-		  @content;
+		@content;
+	} @else {
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+
+		@if $breakpoint-value != null {
+			@media (min-width: $breakpoint-value) {
+				@content;
+			}
 		}
-	  }
 	}
-  }
-	
+}

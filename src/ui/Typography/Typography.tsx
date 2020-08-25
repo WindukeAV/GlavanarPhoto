@@ -4,35 +4,32 @@ import { buildClass } from "../../utils/buildClass";
 import "./Typography.scss"
 
 interface TypographyProps {
-	className?: string;
 	tag: string;
-	fontWeight: FontWeights;
+	fontWeight: FontWeight;
 	children: React.ReactNode;
+	className?: string;
 }
 
 const prefix = "t";
 
-export enum FontWeights {
+export enum FontWeight {
 	Regular = "regular",
 	Medium = "medium",
 	SemiBold = "semibold",
 	Bold = "bold",
 }
 
-
-
 export const Typography: React.FC<TypographyProps> = (props) => {
 	const {
-		className: classNameFromProps,
 		tag,
 		fontWeight,
 		children,
+		className: classNameFromProps,
 		...rest
 	} = props;
 
 	const className = buildClass(
-		`${prefix}-locale-ru`,
-		`${prefix}-weight-${fontWeight}`,
+		`${prefix}-${fontWeight}`,
 		classNameFromProps
 	);
 
