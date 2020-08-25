@@ -1,4 +1,5 @@
 import React from "react";
+import { Collapse } from '@ui/collapse/Collapse';
 
 export interface AccordionTab {
   key: string;
@@ -6,26 +7,46 @@ export interface AccordionTab {
   content: React.ReactNode;
 }
 
+export interface AccordionState {
+  isCollapsedMap: {
+    [key: string]: boolean;
+  };
+}
+
 export interface AccordionProps {
-  tabs: AccordionTab[
-      
-  ];
+  tabs: AccordionTab[];
+}
+
+const getInitialTabsIsCollapsedMap = (tabs: AccordionTab[]): AccordionState["isCollapsedMap"] => {
+  const map: AccordionState["isCollapsedMap"] = {};
+
+  for (const tab of tabs) {
+    map[tab.key] = true;
+  }
+
+  return map;
 }
 
 export const Accordion: React.FC<AccordionProps> = ({
   tabs
 }) => {
-  const [] = React.useState({});
+  const [tabsIsCollapsedMap, setTabsIsCollapsedMap] =
+    React.useState<AccordionState["isCollapsedMap"]>(getInitialTabsIsCollapsedMap(tabs));
 
-
-
-  return (
+    return (
     <div>
       {tabs.map((tab) => {
         return (
-          <div key={tab.key}>           
-            <div>{tab.head}</div>
-            <div>{tab.content}</div>
+          <div key={tab.key}>
+            <div onClick={() => {
+              setTabsIsCollapsedMap({
+                ...tabsIsCollapsedMap,
+                [tab.key]: !tabsIsCollapsedMap[tab.key],
+              });
+            }}>{tab.head}</div>
+            <Collapse isCollapsed={tabsIsCollapsedMap[tab.key]}>
+              {tab.content}
+            </Collapse>
           </div>
         );
       })}

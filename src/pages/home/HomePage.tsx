@@ -1,9 +1,6 @@
 import React from "react";
-// import { Button, Collapse, Accordion } from '@ui';
-
-// import styles from '*.css';
-
-import { Cover } from '../home/partials/cover/Cover';
+import { Accordion } from '@ui';
+import { Cover } from './partials/cover/Cover';
 
 export interface HomePageProps { }
 
@@ -15,22 +12,19 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
   };
 
   return (
-    <section>      
-      <Cover/>
-
-
-      {/* <div  style={{  }}>
+    <section>
+      <Cover />
+      {/* <div>
         <Button onClick={handleButtonClick}>Что делать, если я не умею позировать</Button>
         <Collapse isCollapsed={isCollapsed}>
-          <h1 style={{  }}>
+          <h1>
             Выставить человека в кадре - задача фотографа, а не модели. Это не Ваша "головная боль", а моя. 
           </h1>
-        </Collapse>
-       
+        </Collapse> */}
       <div>
         <Accordion
           tabs={[
-            {              
+            {
               key: "one",
               head: "CHIKI",
               content: "PUKI"
@@ -47,11 +41,7 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
             }
           ]}
         />
-      </div> */}
-
+      </div>
     </section>
-
-  
   );
-
 };
