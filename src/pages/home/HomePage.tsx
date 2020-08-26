@@ -21,7 +21,7 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
             Выставить человека в кадре - задача фотографа, а не модели. Это не Ваша "головная боль", а моя. 
           </h1>
         </Collapse> */}
-      <div>
+      {/* <div>
         <Accordion
           tabs={[
             {
@@ -41,7 +41,7 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
             }
           ]}
         />
-      </div>
+      </div> */}
     </section>
   );
 };

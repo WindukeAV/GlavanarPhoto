@@ -2,57 +2,59 @@
 
 .Cover {
 	width: 100%;
-	height: 100vh;
-
-	clip-path: polygon(0 30%, 100% 9%, 100% 69%, 0 91%);
-
-	background-color: map-get($colors, second-background-color);
+	height: 90vh;
 }
 
-.Cover__container {
-	width: 90%;
+.Сover__container {
+	width: 300px;
 
 	margin: 0 auto;
-
 }
 
 .Cover__title {
-	width: 230px;
+	width: 220px;
 	
-	padding-top: 60px;
+	margin: 0 auto;
 
-	color: map-get($colors, t-color);
+	padding-top: 98px;
 
-	letter-spacing: 4px;
+	color: map-get($colors, secondary);
+
+	letter-spacing: 2px;
 
 	font-size: 31px;
 	text-transform: uppercase;
-}
 
-.Cover__title_svg {
-    position: relative;
-	width: 100%;
-	
-    display: flex;
-	flex-flow: column nowrap;
-	
-	margin-top: 50px;
 }
 
 .Cover__subtitle {
-	width: 240px;
+	width: 220px;
 
 	margin: 0 auto;
 
-	padding-top: 38px;
+	padding-top: 13px;
 
 	text-align: right;
 
 	font-size: 23px;
 
-	color: map-get($colors, t-color);
+	color: map-get($colors, secondary);
 }
 
-.Cover__btn {
-	
+@include breakpoint("md") {
+	.Сover__container {
+		width: 700px;
+	}
+
+	.Cover__title {
+		width: 700px;
+
+		padding-top: 162px;
+		
+		font-size: 62px;
+	}
+
+	.Cover__subtitle {
+		width: 700px;
+	}
 }
