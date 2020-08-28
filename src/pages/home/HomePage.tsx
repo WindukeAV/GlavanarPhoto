@@ -3,6 +3,7 @@ import { Accordion, Collapse, Button } from '@ui';
 
 import { MobileNavbar } from '../../components/MobileNavbar/MobileNavbar';
 import { Cover } from './partials/Cover/Cover';
+import { About } from './partials/About/About';
 
 
 export interface HomePageProps { }
@@ -19,6 +20,7 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
     <section>
       <MobileNavbar/>
       <Cover/>
+      <About/>
       <div>        
         <Button onClick={handleButtonClick}>Что делать, если я не умею позировать</Button>
         <Collapse isCollapsed={isCollapsed}>
