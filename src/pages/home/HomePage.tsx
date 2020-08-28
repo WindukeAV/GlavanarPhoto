@@ -1,6 +1,9 @@
 import React from "react";
-import { Accordion } from '@ui';
-import { Cover } from './partials/cover/Cover';
+import { Accordion, Collapse, Button } from '@ui';
+
+import { MobileNavbar } from '../../components/MobileNavbar/MobileNavbar';
+import { Cover } from './partials/Cover/Cover';
+
 
 export interface HomePageProps { }
 
@@ -11,17 +14,20 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
     setIsCollapsed(!isCollapsed);
   };
 
-  return (
+  return (   
+
     <section>
-      <Cover />
-      {/* <div>
+      <MobileNavbar/>
+      <Cover/>
+      <div>        
         <Button onClick={handleButtonClick}>Что делать, если я не умею позировать</Button>
         <Collapse isCollapsed={isCollapsed}>
           <h1>
             Выставить человека в кадре - задача фотографа, а не модели. Это не Ваша "головная боль", а моя. 
           </h1>
-        </Collapse> */}
-      {/* <div>
+        </Collapse>
+      </div> 
+      <div>
         <Accordion
           tabs={[
             {
@@ -41,7 +47,7 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
             }
           ]}
         />
-      </div> */}
+      </div>
     </section>
   );
 };
