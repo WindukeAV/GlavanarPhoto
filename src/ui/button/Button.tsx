@@ -11,7 +11,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick
 }) => {
   return (
-    <button 
+    <button
       className={styles.Button}
       onClick={onClick}
     >

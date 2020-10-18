@@ -1,29 +1,40 @@
-import React from "react";
-import { Accordion, Collapse, Button } from '@ui';
+import React, { useState } from "react";
+// import { Accordion, Button } from '@ui';
+import styles from './HomePage.scss';
 
-import { MobileNavbar } from '../../components/MobileNavbar/MobileNavbar';
+// import { Modal }  from '../../ui/Modal/Modal';
+// import styles from '../../ui/Modal/Modal.scss'
+
 import { Cover } from './partials/Cover/Cover';
 import { About } from './partials/About/About';
+import { MobileNavbar } from '../../components/MobileNavbar/MobileNavbar';
 
 
-export interface HomePageProps { }
+export interface HomePageProps {  
+  
+ }
 
-export const HomePage: React.FC<HomePageProps> = ({ }) => {
-  const [isCollapsed, setIsCollapsed] = React.useState(true);
+export const HomePage: React.FC<HomePageProps> = ({}) => {
+  
+  const [isModalOpen, setModalState] = React.useState(false);
+  
+  const toggleModal = () => setModalState(!isModalOpen);
 
-  const handleButtonClick = () => {
-    setIsCollapsed(!isCollapsed);
-  };
+  // const [isClicked, setIsClicked] = useState('red');
+  // const handleButtonClick = () => {
+  //   setIsClicked(isClicked === 'red' ? 'blue' : 'red')
+  // };
+  // const styles: React.CSSProperties = { background: isClicked}
 
-  return (   
-
-    <section>
-      <MobileNavbar/>
-      <Cover/>
-      <About/>
+  return (
+    <section className={styles.homepage}>
+      <MobileNavbar></MobileNavbar>
+      <Cover></Cover>
+      <About></About>
+      {/* 
       <div>        
         <Button onClick={handleButtonClick}>Что делать, если я не умею позировать</Button>
-        <Collapse isCollapsed={isCollapsed}>
+        <Collapse isCollapsed={ isCollapsed }>
           <h1>
             Выставить человека в кадре - задача фотографа, а не модели. Это не Ваша "головная боль", а моя. 
           </h1>
@@ -49,7 +60,8 @@ export const HomePage: React.FC<HomePageProps> = ({ }) => {
             }
           ]}
         />
-      </div>
+      </div> */}
+
     </section>
   );
 };

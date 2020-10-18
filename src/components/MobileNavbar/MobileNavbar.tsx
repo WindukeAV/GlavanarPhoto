@@ -5,6 +5,7 @@ import { Burger } from './partials/Burger';
 
 
 export interface MobileNavbarProps {
+	className?: string;
 
 }
 
@@ -21,6 +22,7 @@ export const MobileNavbar: React.FC<MobileNavbarProps> = ({ }) => {
 	return (
 		<div className={CurrentState}>
 			<div className={styles.MobileNavbar}>
+			
 			<Burger
 				onClick={handleButtonClick}
 			/>			

@@ -23,9 +23,13 @@ const getInitialTabsIsCollapsedMap = (tabs: AccordionTab[]): AccordionState["isC
   for (const tab of tabs) {
     map[tab.key] = true;
   }
-
+ 
   return map;
 }
+
+
+
+
 
 export const Accordion: React.FC<AccordionProps> = ({
   tabs
@@ -33,9 +37,12 @@ export const Accordion: React.FC<AccordionProps> = ({
   const [tabsIsCollapsedMap, setTabsIsCollapsedMap] =
     React.useState<AccordionState["isCollapsedMap"]>(getInitialTabsIsCollapsedMap(tabs));
 
+   
     return (
     <div>
       {tabs.map((tab) => {
+         console.log(tabsIsCollapsedMap[tab.key])
+
         return (
           <div key={tab.key}>
             <div onClick={() => {
